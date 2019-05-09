@@ -26,9 +26,9 @@ alias l='ls -CF'
 # git
 alias gs='git status'
 alias gd='git diff'
-alias gl='git log'
-alias glol='git log --oneline'
-alias gc='git checkout'
+alias gbv='git branch -v'
+alias gf='git fetch --all --prune'
+alias gl='git log --oneline'
 
 # colorize grep
 alias grep='grep --color=auto'
