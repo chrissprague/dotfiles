@@ -47,6 +47,22 @@ else
     PSCOLORCODE=36
 fi
 
-#PS1='\[\033[${PSCOLORCODE}m\]\u@\h\[\033[00m\]:\[\033[01;39m\]\w\[\033[00m\]\$ '
-PS1="\[\e[0;38;5;33m\]\u\[\e[0m\]@\[\e[0;38;5;14m\]\h\[\e[0m\]:\[\e[0;38;5;96m\]\w\[\e[0m\]\$ "
+COLOR_SUFFIX="0;49;"
+RED="31m"
+GREEN="32m"
+YELLOW="33m"
+BLUE="34m"
+CYAN="36m"
+WHITE="37m"
+GRAY="90m"
 
+BOLD="1;"
+
+PS1_USER_COLOR=$COLOR_SUFFIX$YELLOW
+PS1_HOST_COLOR=$COLOR_SUFFIX$GREEN
+PS1_DIR_COLOR=$COLOR_SUFFIX$BOLD$WHITE
+
+PS1="\[\e[$PS1_USER_COLOR\]\u\[\e[0m\]@\[\e[$PS1_HOST_COLOR\]\h\[\e[0m\]:\[\e[$PS1_DIR_COLOR\]\w\[\e[0m\]\$ "
+
+# Lamer version
+#PS1='\[\033[${PSCOLORCODE}m\]\u@\h\[\033[00m\]:\[\033[01;39m\]\w\[\033[00m\]\$ '
