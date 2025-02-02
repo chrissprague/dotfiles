@@ -29,6 +29,7 @@ alias gd='git diff'
 alias gbv='git branch -v'
 alias gf='git fetch --all -p'
 alias gl='git log --oneline'
+alias gr='git remote -v'
 
 # colorize grep
 alias grep='grep --color=auto'
